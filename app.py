@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -79,7 +78,7 @@ st.markdown(
 
 
 # LOAD DATASETS
-project_folder = r"C:\Users\jahna\GreenSupply_Streamlit"
+project_folder = os.path.dirname(os.path.abspath(__file__))
 data_folder = os.path.join(project_folder, "data")
 
 orders = pd.read_csv(
@@ -615,8 +614,4 @@ fig8.update_layout(
 )
 
 st.plotly_chart(fig8, use_container_width=True)
-
-
-
-
 
