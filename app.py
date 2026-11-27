@@ -79,7 +79,7 @@ st.markdown(
 
 # LOAD DATASETS
 project_folder = os.path.dirname(os.path.abspath(__file__))
-data_folder = os.path.join(project_folder, "data")
+data_folder = project_folder
 
 orders = pd.read_csv(
     os.path.join(data_folder, "BA-Cleaned Data set(Cleaned Orders).csv"),
@@ -614,4 +614,5 @@ fig8.update_layout(
 )
 
 st.plotly_chart(fig8, use_container_width=True)
+
 
